@@ -5,5 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Agregar Carreras</h1>
+ <h1>Crear Carrera</h1>
+ <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for="name">Nombre:</label>
+  <input type="text" name="name" id="name" required>
+  <br>
+  <label for="shortname">Nombre Corto:</label>
+  <input type="text" name="shortname" id="shortname" required>
+  <br>
+  <label for="image">Imagen:</label>
+  <input type="file" name="image" id="image" required>
+  <br>
+  <label for="state">Estado:</label>
+  <input type="checkbox" name="state" id="state">
+  <br>
+  <input type="submit" value="Crear">
+</form>
+
 {% endblock %}
