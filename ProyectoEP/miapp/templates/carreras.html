@@ -6,12 +6,6 @@
 
 {% block content %}
 <h1>Listado de Carreras</h1>
-<ul>
-  {% for career in careers %}
-    <li>{{ career.name }} <a href="{% url 'delete_career' career.idcareer %}">Eliminar</a></li>
-  {% endfor %}
-</ul>
-<a href="{% url 'crear_carreras' %}">Crear Carrera</a>
-
-
+<br>
+<input type="submit" value="Eliminar">
 {% endblock %}
